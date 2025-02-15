@@ -4,9 +4,9 @@ import { Router } from "./service/Router"
 function App() {
 
   return (
-    <Default>
-      <Router />
-    </Default>
+    <Default 
+      render={() => <Router />}
+    />
   )
 }
 

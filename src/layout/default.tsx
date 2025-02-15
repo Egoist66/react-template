@@ -1,10 +1,10 @@
-import { FC } from "react";
+import { FC, JSX } from "react";
 
 type DefaultLayoutProps = {
-    children: React.ReactNode,
-    header?: React.ReactNode | (() => React.ReactNode),
-    footer?: React.ReactNode | (() => React.ReactNode)
-    render?: (props: any) => React.ReactNode
+    children?: React.ReactNode | JSX.Element,
+    header?: React.ReactNode | (() => React.ReactNode) | JSX.Element,
+    footer?: React.ReactNode | (() => React.ReactNode | JSX.Element),
+    render?: (props: any) => React.ReactNode | JSX.Element
 }
 
 export const Default: FC<DefaultLayoutProps> = ({children, header, footer, render}) => {
